@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -39,7 +39,7 @@ model Post {
   published   Boolean   @default(false)
   type        String    @default("BLOG")
   mood        String?
-  visibility  String    @default("PUBLIC")   // "PUBLIC" or "FOLLOWERS"
+  visibility  String    @default("PUBLIC")
   authorId    String
   author      User      @relation(fields: [authorId], references: [id])
   tags        String?
