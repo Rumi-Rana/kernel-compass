@@ -245,3 +245,15 @@ body::after {
 .ProseMirror img.ProseMirror-selectednode {
   border-color: #8b5cf6;  /* purple border when selected */
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
